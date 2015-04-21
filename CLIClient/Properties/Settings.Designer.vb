@@ -67,7 +67,7 @@ Partial Public NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("Evil")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("admin")>  _
     Public Property Username() As String
         Get
             Return CType(Me("Username"),String)
@@ -79,7 +79,7 @@ Partial Public NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("lol")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("admin")>  _
     Public Property Password() As String
         Get
             Return CType(Me("Password"),String)
@@ -103,7 +103,7 @@ Partial Public NotInheritable Class Settings
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("Debug")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("Info")>  _
     Public Property Loglevel() As Global.Client.UI.LogLevel
         Get
             Return CType(Me("Loglevel"),Global.Client.UI.LogLevel)

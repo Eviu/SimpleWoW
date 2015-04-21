@@ -6,16 +6,16 @@
       <Value Profile="(Default)">3724</Value>
     </Setting>
     <Setting Name="Username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Evil</Value>
+      <Value Profile="(Default)">admin</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">lol</Value>
+      <Value Profile="(Default)">admin</Value>
     </Setting>
     <Setting Name="Hostname" Type="System.String" Scope="User">
       <Value Profile="(Default)">127.0.0.1</Value>
     </Setting>
     <Setting Name="Loglevel" Type="Client.UI.LogLevel" Scope="User">
-      <Value Profile="(Default)">Debug</Value>
+      <Value Profile="(Default)">Info</Value>
     </Setting>
   </Settings>
 </SettingsFile>
