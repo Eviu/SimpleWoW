@@ -21,7 +21,7 @@ Namespace Authentication
                 Dim binaryStream As New BinaryWriter(Stream)
                 binaryStream.Write(CByte(AuthCommand.LOGON_CHALLENGE))
                 binaryStream.Write(CByte(6))
-                binaryStream.Write(CByte(username.Length + 30))
+                binaryStream.Write(Convert.ToUInt16(username.Length + 30))
                 binaryStream.Write("WoW".ToCString())
                 binaryStream.Write(version)
                 binaryStream.Write(build)
