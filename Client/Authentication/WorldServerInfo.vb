@@ -55,7 +55,16 @@ Namespace Authentication
 			Private Set
 				m_Population = Value
 			End Set
-		End Property
+        End Property
+        Public Property ID() As UInteger
+            Get
+                Return m_ID
+            End Get
+            Private Set(value As UInteger)
+                m_ID = Value
+            End Set
+        End Property
+        Private m_ID As UInteger
 		Private m_Population As Single
 		Private load As Byte
 		Private timezone As Byte
@@ -78,7 +87,7 @@ Namespace Authentication
 			Population = reader.ReadSingle()
 			load = reader.ReadByte()
 			timezone = reader.ReadByte()
-			unk1 = reader.ReadByte()
+            ID = reader.ReadByte()
 
 			If (Flags And 4) <> 0 Then
 				version_major = reader.ReadByte()
