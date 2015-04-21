@@ -1,0 +1,13 @@
+
+Namespace Authentication
+	Enum AuthCommand As Byte
+		LOGON_CHALLENGE = &H0
+		LOGON_PROOF = &H1
+		REALM_LIST = &H10
+		TRANSFER_INITIATE = &H30
+		TRANSFER_DATA = &H31
+		TRANSFER_ACCEPT = &H32
+		TRANSFER_RESUME = &H33
+		TRANSFER_CANCEL = &H34
+	End Enum
+End Namespace

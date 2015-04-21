@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30FCEB7D-60AF-4547-8244-B67B8C4D8A61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Client.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Client.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\AuthCommand.vb" />
+    <Compile Include="Authentication\AuthResult.vb" />
+    <Compile Include="Authentication\ClientAuthChallenge.vb" />
+    <Compile Include="Authentication\ClientAuthProof.vb" />
+    <Compile Include="Authentication\CommandHandler.vb" />
+    <Compile Include="Authentication\Network\AuthSocket.vb" />
+    <Compile Include="Authentication\Network\ISendable.vb" />
+    <Compile Include="Authentication\ServerAuthChallenge.vb" />
+    <Compile Include="Authentication\ServerAuthProof.vb" />
+    <Compile Include="Authentication\WorldServerInfo.vb" />
+    <Compile Include="Authentication\WorldServerList.vb" />
+    <Compile Include="Chat\ChatChannel.vb" />
+    <Compile Include="Chat\ChatMessage.vb" />
+    <Compile Include="Chat\Definitions\ChatMessageType.vb" />
+    <Compile Include="Chat\Definitions\ChatTag.vb" />
+    <Compile Include="Chat\Definitions\Language.vb" />
+    <Compile Include="Crypto\ARC4.vb" />
+    <Compile Include="Crypto\HashHelper.vb" />
+    <Compile Include="Extensions.vb" />
+    <Compile Include="Game.vb" />
+    <Compile Include="GameSocket.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="UI\IGameUI.vb" />
+    <Compile Include="UI\LogLevel.vb" />
+    <Compile Include="World.vb" />
+    <Compile Include="World\CharacterEnumeration.vb" />
+    <Compile Include="World\Definitions\Extensions.vb" />
+    <Compile Include="World\Definitions\Gender.vb" />
+    <Compile Include="World\Definitions\PlayerClass.vb" />
+    <Compile Include="World\Definitions\Race.vb" />
+    <Compile Include="World\Network\AuthenticationCrypto.vb" />
+    <Compile Include="World\Network\AuthResponse.vb" />
+    <Compile Include="World\Network\ClientHeader.vb" />
+    <Compile Include="World\Network\Header.vb" />
+    <Compile Include="World\Network\InPacket.vb" />
+    <Compile Include="World\Network\OutPacket.vb" />
+    <Compile Include="World\Network\Packet.vb" />
+    <Compile Include="World\Network\PacketHandlers\AuthHandlers.vb" />
+    <Compile Include="World\Network\PacketHandlers\ChatHandlers.vb" />
+    <Compile Include="World\Network\PacketHandlers\QueryHandler.vb" />
+    <Compile Include="World\Network\ServerHeader.vb" />
+    <Compile Include="World\Network\WorldSocket.vb" />
+    <Compile Include="World\PacketHandler.vb" />
+    <Compile Include="World\WorldCommand.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,21 @@
+
+Namespace Authentication
+	Enum AuthResult As Byte
+		SUCCESS = 0
+		FAILURE = &H1
+		UNKNOWN1 = &H2
+		ACCOUNT_BANNED = &H3
+		NO_MATCH = &H4
+		UNKNOWN2 = &H5
+		ACCOUNT_IN_USE = &H6
+		PREPAID_TIME_LIMIT = &H7
+		SERVER_FULL = &H8
+		WRONG_BUILD_NUMBER = &H9
+		UPDATE_CLIENT = &Ha
+		UNKNOWN3 = &Hb
+		ACCOUNT_FREEZED = &Hc
+		UNKNOWN4 = &Hd
+		UNKNOWN5 = &He
+		PARENTAL_CONTROL = &Hf
+	End Enum
+End Namespace
